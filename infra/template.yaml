@@ -9,7 +9,7 @@ Resources:
       FunctionUrlConfig:
         AuthType: NONE
         InvokeMode: BUFFERED
-      FunctionName: GetSubtitles
+      FunctionName: lambda_handler
       Description: Get Subtitles for video using yt-dlp
       PackageType: Image
       Timeout: 300

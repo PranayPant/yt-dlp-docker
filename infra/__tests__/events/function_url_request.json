@@ -2,7 +2,7 @@
   "version": "2.0",
   "routeKey": "$default",
   "rawPath": "/my/path",
-  "rawQueryString": "parameter1=value1&parameter1=value2&parameter2=value",
+  "rawQueryString": "parameter1=value1&parameter1=value2&videoId=_nypwpOuU_c",
   "cookies": ["cookie1", "cookie2"],
   "headers": {
     "header1": "value1",
@@ -10,7 +10,7 @@
   },
   "queryStringParameters": {
     "parameter1": "value1,value2",
-    "parameter2": "value"
+    "videoId": "_nypwpOuU_c"
   },
   "requestContext": {
     "accountId": "123456789012",
