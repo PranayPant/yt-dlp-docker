@@ -1,8 +1,15 @@
 Description: Get subtitles from video.
 Resources:
-  Function: 
+  Function:
     Type: AWS::Serverless::Function
-      Properties:
-        FunctionName: FUNCTION_NAME_HERE
-        Handler: app.lambda_handler
-        Runtime: python3.9
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: .
+    Properties:
+      FunctionUrlConfig:
+        AuthType: NONE
+        InvokeMode: BUFFERED
+      FunctionName: GetSubtitles
+      Description: Get Subtitles for video using yt-dlp
+      PackageType: Image
+      Timeout: 300
