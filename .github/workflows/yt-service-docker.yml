@@ -1,9 +1,9 @@
-name: ci
+name: Deploy to Docker Hub
 
 on: workflow_dispatch
 
 jobs:
-  docker:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
