@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, Response
 from fastapi.middleware.cors import CORSMiddleware
 # from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 import ssl
@@ -20,7 +20,7 @@ origins = [
 def write_subs(url: str, filename: str = None):
     # Execute your Python script here
     file_contents = download_subs(url, filename) 
-    return file_contents
+    return Response(content=file_contents, media_type="application/xml")
 
 app.add_middleware(
     CORSMiddleware,

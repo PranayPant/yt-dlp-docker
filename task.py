@@ -15,7 +15,6 @@ DEFAULT_OPTS =  {
 }
 
 def download_subs(url: str, filename: str | None = None, yt_opts=None):
-    print('DOWNLOAD METHOD')
     yt_opts = yt_opts or {}
     opts = {**DEFAULT_OPTS, **yt_opts}
 
@@ -23,9 +22,7 @@ def download_subs(url: str, filename: str | None = None, yt_opts=None):
     opts['outtmpl']['subtitle'] = f'{filename}.%(ext)s'
 
     ydl = yt_dlp.YoutubeDL(opts)
-    
-    logger.info('DOWNLOAD_SUBS', url, opts)
-    
+        
     ydl.download(url)
     
     filename_with_ext = f'{filename}.en.ttml'
