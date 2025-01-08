@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  yt-dlp:
+    image: ghcr.io/yt-dlp/yt-dlp:latest
+    container_name: yt-dlp
+    volumes:
+      - ./downloads:/downloads
+    build: .
+    ports:
+      - "8080:8080"
